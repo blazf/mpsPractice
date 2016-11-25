@@ -29,7 +29,7 @@ let tweets = base.store('tweets').allRecords;
 console.log('got ' + tweets.length + ' tweets');
 
 // Let's print the first few tweets in the training set and its sentiment.
-for (let i = 0; i < 10; i++) {
+for (let i = 1000; i < 1010; i++) {
     console.log(i, tweets[i].text, tweets[i].target > 0 ? 'POS' : 'NEG');
 }
 
@@ -43,7 +43,7 @@ let featureSpace = new qm.FeatureSpace(base, {
         stopwords: 'none', // none, en, [...]
         stemmer: 'none' // porter, none
     },
-    ngrams: 1,
+    ngrams: 2,
     normalize: true
 });
 featureSpace.updateRecords(tweets);
@@ -59,7 +59,7 @@ if (true) {
 
     // Let's try to use the model and map a short text to a vector. We will list the indices
     // of the words that are nonzero.
-    for (let p of ['kitty cat', 'kitty cat cats', 'slavoj zizek']) {
+    for (let p of ['kitty cat', 'kitty cat cats', 'zizek and slavoj zizek', 'eating and chatting on my computer']) {
         // convert to sparse vector
         let sparseVector = featureSpace.extractSparseVector({ text: p });
         // check the vector
@@ -74,7 +74,7 @@ if (true) {
 }
 
 // nearest neighbour search
-if (true) {
+if (false) {
     // construct sparse matrix
     let bowMatrix = featureSpace.extractSparseMatrix(tweets);
     // check how big is the matrix
@@ -82,7 +82,10 @@ if (true) {
     // find nearest neighbours for couple of examples
     let examples = [
         "It is a rainy day",
-        "Cats are funny"
+        "Cats are funny",
+        "Cats are stupid.",
+        "Cats are totally amazing!",
+        "Cats are not totally amazing!"
     ];
     for (let example of examples) {
         // get sparse vector
@@ -95,10 +98,11 @@ if (true) {
         for (let i = 0; i < 5; i++) {
             // get tweet
             let tweet = tweets[sort.perm[i]].text;
+            let target = tweets[sort.perm[i]].target > 0 ? 'POS' : 'NEG'
             // get similarity
             let sim = sort.vec[i];
             // report
-            console.log('   ' + sim.toFixed(2) + ' => "' + tweet + '"');
+            console.log('   ' + sim.toFixed(2) + ' => "' + tweet + '" ' + target);
         }
     }
 }
@@ -113,7 +117,7 @@ if (true) {
     // Let's inspect the model! Since it's a linear model we can directly interpret the
     // weights - words with positive weights will contribute to the decision that the
     // sentiment is positive. Let's look at the weights for 'good', 'cool', 'bad', 'crap'.
-    for (let w of ['good', 'cool', 'bad', 'crap', 'find']) {
+    for (let w of ['good', 'cool', 'bad', 'crap', 'find', 'nice', 'zizek']) {
         // convert word to sparse vector
         let sparseVector = featureSpace.extractSparseVector({text: w});
         // if we have any non-zero element
@@ -133,7 +137,8 @@ if (true) {
     let examples = [
         "Cats are stupid.",
         "Cats are totally amazing!",
-        "Cats are not totally amazing!"
+        "Cats are not totally amazing!",
+        "Cats are on my computer"
     ];
 
     for (let example of examples) {
