@@ -5,6 +5,14 @@
 - [Text mining](TextMiningMPS_Nov2016.pdf)
 - [Sensor Data Analysis](SensorAnalytics_November2016.pdf)
 
+## Exercises
+
+### Text mining:
+
+- [Sentiment classification](textmining/) -- constructing bag-of-words
+from tweets and classification of sentiment using nearest neighbor and
+support vector machine.
+
 ## Seminar tasks
 
 ### Text Mining
