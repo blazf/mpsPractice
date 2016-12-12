@@ -2,8 +2,8 @@
 
 ## Slides from the lectures
 
-[Text mining](TextMiningMPS_Nov2016.pdf)
-[Sensor Data Analysis](SensorAnalytics_November2016.pdf)
+- [Text mining](TextMiningMPS_Nov2016.pdf)
+- [Sensor Data Analysis](SensorAnalytics_November2016.pdf)
 
 ## Seminar tasks
 
