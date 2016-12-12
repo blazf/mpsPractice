@@ -1,6 +1,7 @@
 {
-    "dependencies": {
-        "qminer": "7.1.0",
-        "qminer-data-loader": "2.0.1"
-    }
+  "dependencies": {
+    "qminer": "7.1.0",
+    "qminer-data-loader": "2.0.1",
+    "request": "2.79.0"
+  }
 }
