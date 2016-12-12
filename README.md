@@ -13,6 +13,8 @@
 from tweets and classification of sentiment using nearest neighbor and
 support vector machine.
 
+### Sensor Data Analysis
+
 ## Seminar tasks
 
 ### Text Mining
