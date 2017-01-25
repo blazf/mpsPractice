@@ -4,6 +4,7 @@
 
 - [Text mining](TextMiningMPS_Nov2016.pdf)
 - [Sensor Data Analysis](SensorAnalytics_November2016.pdf)
+- [MSc Data Mining and Knowledge Discovery Part III - Text, web and multimedia mining](MSc_DMTextMiningMPS_Nov2016.pdf)
 
 ## Exercises
 
