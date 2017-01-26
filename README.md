@@ -41,8 +41,8 @@ Assignments:
 - Miha Torkar, Zala Herga: Trend detection on Event Registry data
 - Erik Novak, Klemen Kenda: Novelty detection on event Registry data
 - James Hodson: ?
-- Gregor Grasselli, Tamara Hovhannisyan: Topic classification [dataset](textmining/dataset/news.001.txt)
-- Gjorgi Peev, Gordana Ispirova: Topic classification [dataset](textmining/datset/news.002.txt)
+- Gregor Grasselli, Tamara Hovhannisyan: Topic classification [dataset](textmining/dataset/https://raw.githubusercontent.com/blazf/mpsPractice/master/textmining/dataset/news.001.txt)
+- Gjorgi Peev, Gordana Ispirova: Topic classification [dataset](textmining/datset/https://raw.githubusercontent.com/blazf/mpsPractice/master/textmining/dataset/news.002.txt)
 
 ***Instructions for topic classification task:***
 
