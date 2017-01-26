@@ -81,8 +81,8 @@ resampler.setParams({ outAggr: insert });
 // now we want to train, first prepare a model that we can update
 // we will use recursive linear regression
 var linreg = new qm.analytics.RecLinReg({ "dim": 3, "forgetFact": 1.0 });
-// we will train for time window of 1 minute (== 6 records
-let window = 1;
+// we will train for time window of 1 minute (== 6 records)
+let window = 6;
 // create stream aggregate that will be called for each new clean record and update the regression
 let trainStreamAggr = cleanStore.addStreamAggr({
     onAdd: (rec) => {
